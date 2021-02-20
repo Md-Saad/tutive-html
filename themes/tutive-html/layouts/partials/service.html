@@ -1,0 +1,17 @@
+<!-- Mark up for Services Section-->
+{{with .Site.GetPage "/service"}}
+<section class="service" id="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="section_header text-left">
+          <h2>{{.Title}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+        {{.Content}}
+    </div>
+  </div>
+</section>
+{{end}}

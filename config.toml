@@ -1,0 +1,108 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+paginate = 6
+theme= "tutive-html"
+title = "tutive"
+[Menu]
+  # Main Menu
+  [[menu.Main]]
+  name = "About"
+  url= "/about/"
+  weight = 1
+
+  [[menu.Main]]
+  name = "Solutions"
+  url= "/solutions/"
+  weight = 2
+  [[menu.Main]]
+  name = "Pricing"
+  url= "/pricing/"
+  weight = 3
+  [[menu.Main]]
+  name = "Resource"
+  url= "/blog/"
+  weight = 4
+  [[menu.Main]]
+  name = "Integration"
+  url= "/integration/"
+  weight = 5
+  [[menu.Main]]
+  name = "Contact"
+  url= "/contact/"
+  weight = 6
+
+  #Sitemap Menu 
+  [[menu.sitemap]]
+  name = "About Us"
+  url = "/about/"
+  weight = 1
+  [[menu.sitemap]]
+  name = "Solutions"
+  url = "/solutions/"
+  weight = 1
+  [[menu.sitemap]]
+  name = "Pricing"
+  url = "/pricing/"
+  weight = 2
+  [[menu.sitemap]]
+  name = "Integrations"
+  url = "/integration/"
+  weight = 3
+  [[menu.sitemap]]
+  name = "Contact Us"
+  url = "/contact/"
+  weight = 4
+
+[params]
+  blogPageURL = "blog"
+  contactLink = "contact"
+  memberLink = "member"
+  login = "login"
+  copyright = "All right reserved copyright © tutive 2021"
+  formspreeURL = "https://formspree.io/xgenqoqr"
+  googleAnalytics = "UA-175025671-1"
+  logo = "images/logo.svg"
+  footerlogo = "images/logo.svg"
+
+  [params.map]
+  APIkey = "AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0"
+  latitude = "23.7783741"
+  longitude = "90.3746808"
+  pinImage = "images/pin.png"
+
+  # Socail icons
+  [[params.social]]
+  icon = "fa-facebook-official"
+  url = "https://www.facebook.com/"
+  weight = 1
+  [[params.social]]
+  icon = "fa-linkedin-square"
+  url = "https://www.linkedin.com/"
+  weight = 2
+  [[params.social]]
+  icon = "fa-pinterest-square"
+  url = "https://www.pinterest.com/"
+  weight = 3
+  [[params.social]]
+  icon = "fa-twitter-square"
+  url = "https://twitter.com/"
+  weight = 4
+
+  [params.footer]
+    [[params.footer.social.link]]
+    icon = "fa-facebook-f"
+    url = "https://www.facebook.com/"
+    weight = 1
+    [[params.footer.social.link]]
+    icon = "fa-instagram"
+    url = "https://www.linkedin.com/"
+    weight = 2
+    [[params.footer.social.link]]
+    icon = "fa-twitter"
+    url = "https://www.pinterest.com/"
+    weight = 3
+    [[params.footer.social.link]]
+    icon = "fa-pinterest-p"
+    url = "https://twitter.com/"
+    weight = 4
+

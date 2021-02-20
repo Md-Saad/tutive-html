@@ -1,0 +1,46 @@
+/* Style For Buttons */
+.button {
+  display: inline-block;
+  background-color: $primary-color;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 40px;
+  @include transition(all 0.3s ease);
+  .right-arrow {
+    margin-left: 5px;
+    stroke-width: 1;
+    stroke: #fff;
+  }
+  &:hover {
+    color: #ffffff !important;
+    @include transform(scale(1.03));
+    @include box-shadow(0px, 3px, 6px, rgba(0, 0, 0, 0.16));
+    .right-arrow {
+      stroke: #fff;
+      stroke-width: 1;
+    }
+  }
+  @include desktop{
+    font-size: 14px;
+    padding: 15px 10px;
+    width:100%;
+  }
+}
+
+.button-light {
+  @extend .button;
+  background-color: $secondary-color;
+}
+.button-dark {
+  @extend .button;
+  background-color: $text-color-dark;
+}
+.hire_button{
+  @include desktop-lg{
+    padding: 10px;
+  }
+}

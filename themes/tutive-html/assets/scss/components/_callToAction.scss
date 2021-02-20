@@ -1,0 +1,69 @@
+.callToAction{
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  &_item{
+    position: relative;
+    background:  $primary-color;
+    padding: 85px 10%;
+    border-radius: 30px;
+    z-index: 2;
+    .section_header{
+      z-index: 1111111111112;
+      h2,h3{
+        color:#fff;
+        margin-bottom: 40px;
+        @include desktop{
+            margin-bottom: 20px;
+        }
+      }
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: #FBF6EE;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      z-index: -1;
+      opacity: .06;
+      @include tablet{
+          width: 350px;
+          height: 350px;
+      }
+    }
+  }
+  &_shape_avater{
+    position: absolute;
+    right:20px;
+    top: -35%;
+    @include desktop{
+      right: -10px;
+      img{
+          width: 70%;
+      }
+    }
+    @include tablet{
+      right: -15px;
+      top: -31%;
+    }
+  }
+  &_shape{
+    position: absolute;
+    left: 10%;
+    bottom: 25%;
+    @include tablet{
+      img{
+          width: 50%;
+      }
+    }
+  }
+  @include desktop{
+    a.button{
+        width: auto;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/* Style For Integration Sections*/
+%integration-shape{
+    position: absolute;
+    @include border-radius(50%);
+    @include box-shadow(0, 63px, 63px, rgba(0, 0, 0, .16));
+}
+.integration{
+  background: #FCF7EF;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .section_header{
+    p{
+        padding: 0 20%;
+    }
+  }
+  &_items{
+    height: 700px;
+    overflow: hidden;
+  }
+  &_shape{
+    @extend %integration-shape;
+    img{
+        width: 100%;
+    }
+  }
+  &_center{
+    width:70px;
+    top: 15%;
+    left: 50%;
+    @include transform(translateX(-50%));
+  }
+  &_left_top{
+    width:70px;
+    top: 7%;
+    left: 10%;
+    @include tablet{
+        width:50px;
+    }
+  }
+  &_left_center{
+    width:100px;
+    top: 50%;
+    left: 5%;
+    @include transform(translateY(-50%));
+    @include tablet{
+        width:50px;
+    }
+}
+  &_left_bottom{
+    width:50px;
+    bottom: 20%;
+    left: 20%;
+  }
+  &_right_top{
+    width:50px;
+    top: 8%;
+    right: 10%;
+  }
+  &_right_center{
+    width:50px;
+    top: 35%;
+    right: 6%;
+    @include tablet{
+        top: 45%;
+    }
+  }
+  &_right_bottom{
+    width:100px;
+    bottom: 20%;
+    right: 20%;
+    @include tablet{
+        width:50px;
+    }
+}
+
+}

@@ -1,0 +1,50 @@
+/* Style For Fonts and Texts */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+p,.table{
+  font-size: $font-size;
+  color: $text-color;
+  font-weight: 400;
+  line-height: 28px;
+  @include desktop{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+a{
+  color: $text-color-dark;
+  font-size: $font-size;
+}
+a:hover{
+  color: $text-color-link !important;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: $primary-font;
+  text-transform: capitalize;
+  color: $text-color-header;
+  margin-top: 0;
+  font-weight: 700;
+}
+h3,h4{
+  font-size: 20px;
+  font-weight:600;
+  line-height: 34px;
+  @include desktop{
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+}
+
+h5{
+  font-size: 18px;
+  font-weight:600;
+  line-height: 28px;
+}
+
+.table thead{
+  color: $text-color-header;
+  font-size: 20px;
+  font-weight:600;
+  line-height: 34px;
+}

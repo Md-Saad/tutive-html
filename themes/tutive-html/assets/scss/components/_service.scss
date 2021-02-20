@@ -1,0 +1,139 @@
+/* Style For Services Sections*/
+%service_shape {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  z-index: -1;
+  @include tablet{
+    height: 60px;
+    width: 60px;
+  }
+}
+.service {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  @include desktop{
+    padding: 100px 0 50px;
+  }
+  .section_header {
+    margin-bottom: 50px;
+  }
+  .service_items {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+  .list-group {
+    position: relative;
+    border-radius: 0;
+    @include tablet{
+      margin-bottom: 25px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 7px;
+      background: #e7e8ef;
+      left: -7px;
+      top: 0;
+      border-radius: 20px;
+    }
+  }
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 0 1rem 0 2rem;
+    background-color: #fff;
+    border: none;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    @include desktop{
+      margin-bottom: 16px;
+    }
+    &:last-child {
+      padding: 0 1rem 0 2rem;
+      margin-bottom: 0;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 32px;
+      font-weight: 500;
+      color: $text-color;
+      @include desktop{
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    p {
+      display: none;
+      margin-bottom: 0;
+    }
+    &.active {
+      background-color: transparent;
+      border-color: transparent;
+      h3 {
+        font-weight: 600;
+        color: $text-color-dark;
+      }
+      p {
+        display: inline-block;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 7px;
+        background: #8a74ff;
+        left: -7px;
+        top: 0;
+        border-radius: 20px;
+      }
+    }
+  }
+  .tab-pane {
+    position: relative;
+    img {
+      width: 100%;
+      border-radius: 20px;
+      @include box-shadow(0, 43px, 66px, rgba(0, 0, 0, 0.08));
+    }
+  }
+  .tab-content {
+    position: relative;
+    &:after {
+      @extend %service_shape;
+      background: #fcf9f5;
+      top: -30px;
+      left: -30px;
+      @include tablet{
+        top: -15px;
+        left: -15px;
+      }
+    }
+    &:before {
+      @extend %service_shape;
+      background: #f3fafd;
+      bottom: -30px;
+      right: -30px;
+      @include desktop-lg{
+        bottom: -22px;
+        right: -22px;
+      }
+      @include tablet{
+        bottom: -15px;
+        right: -15px;
+      }
+    }
+  }
+  @include desktop{
+    .section_header {
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+---
+title : "Accelerate Every Stage Of The Deal Cycle With Tutive"
+enable : true
+items:
+  - name : "Proposals"
+    desc: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    icon : "images/operationals/proposals.svg"
+    url : "solutions"
+  - name : "Quotes"
+    desc: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    icon : "images/operationals/quotes.svg"
+    url : "solutions"
+  - name : "Contacts"
+    desc: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    icon : "images/operationals/contacts.svg"
+    url : "solutions"
+  - name : "Payments"
+    desc: "Some quick example text to build on the card title and make up the bulk of the card's content."
+    icon : "images/operationals/payments.svg"
+    url : "solutions"
+---

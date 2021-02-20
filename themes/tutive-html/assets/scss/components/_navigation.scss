@@ -1,0 +1,94 @@
+/* Style For Site Navigation Header Section*/
+.navbar {
+  background: #fff;
+  padding: 25px 30px 15px;
+  transition: 0.3s ease;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  &-brand {
+    margin-right: 50px;
+    @include desktop-lg{
+      margin-right: 30px;
+    }
+  }
+  .nav-link {
+    color: #282f49;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    transition: 0.3s ease;
+    &:hover {
+      color: $secondary-color;
+    }
+    @include desktop-lg{
+      padding-left: 7px !important;
+      padding-right: 7px !important;
+    }
+    &.active{
+      font-weight: 700;
+    }
+  }
+  .log_in {
+    padding-top: 20px;
+    font-weight: 500;
+    @include desktop-lg{
+      padding-top: 10px;
+      margin-right: 15px;
+    }
+  }
+
+  //toggle icon
+  @include desktop {
+    background: $white;
+    text-align: center;
+    .log_in {
+      padding-top: 0;
+      padding-bottom: 15px;
+      margin-right: 0px !important;
+    }
+    .navbar-toggler {
+      outline: 0;
+      padding: 0;
+      &-icon {
+        @include size(25px, 2px);
+        @include transition(all 0.2s);
+        background: $primary-color;
+        display: block;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          transform-origin: 10% 10%;
+        }
+        &:nth-child(2) {
+          @include opacity(0);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          transform-origin: 10% 90%;
+        }
+      }
+      &.collapsed {
+        .navbar-toggler-icon {
+          &:nth-child(1) {
+            transform: rotate(0);
+          }
+          &:nth-child(2) {
+            @include opacity(1);
+          }
+          &:nth-child(3) { 
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+  }
+  &.nav-bg {
+    background: $white;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.09);
+    padding: 15px 20px;
+  }
+}

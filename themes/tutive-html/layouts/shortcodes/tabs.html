@@ -1,0 +1,53 @@
+<div class="col-md-4">
+	<div class="list-group" id="list-tab" role="tablist">
+
+	{{ $tabTotal := .Get "tabTotal" }}
+	{{ range $index, $sequence := (seq $tabTotal) }}
+
+		{{ $tabID := $.Get "tabID" }}
+		{{ $tabName := (print "tabName" $sequence) }}
+		{{ $tabDesc := (print "tabDesc" $sequence) }}
+		{{ $tabHREF := (print "tab-" $tabID $sequence) }}
+		
+		{{ if eq $sequence 1 }}
+			<div
+				class="list-group-item list-group-item-action active"
+				id="list-{{ $tabName }}-list"
+				data-toggle="list"
+				href="#{{ $tabHREF | urlize }}"
+				role="tab"
+				aria-controls="{{$tabName}}"
+			>
+				<h3>{{ $.Get $tabName }}</h3>
+				<p>
+					{{ $.Get $tabDesc }}
+				</p>
+			</div>
+
+		{{ else }}
+			<div
+				class="list-group-item list-group-item-action"
+				id="list-{{ $tabName }}-list"
+				data-toggle="list"
+				href="#{{ $tabHREF | urlize }}"
+				role="tab"
+				aria-controls="home"
+			>
+				<h3>{{ $.Get $tabName }}</h3>
+				<p>
+					{{ $.Get $tabDesc }}
+				</p>
+			</div>
+
+		{{ end }}
+	{{ end }}
+
+	</div>
+</div>
+<div class="col-md-7 ml-auto">
+	<div class="tab-content" id="nav-tabContent">
+
+	{{ .Inner }}
+
+	</div>
+</div>

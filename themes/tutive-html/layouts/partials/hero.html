@@ -1,0 +1,50 @@
+<!-- Mark up for Hero Section-->
+{{with .Site.Data.hero}}
+{{if .enable}}
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="hero-content">
+          <h1>{{.title | safeHTML}}</h1>
+          <p>
+            {{.subtitle}}
+          </p>
+          <ul>
+            <li><a href="{{"contact" | absURL}}" class="button-light">Start 14 Days Trial</a></li>
+            <li><a href="{{"login" | absURL}}" class="button">Request A Demo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="hero-figure text-center">
+          <img
+            src="{{.feature_image | absURL}}"
+            alt="hero shape 1"
+            class="hero-figure-image"
+          />
+          <div class="hero-shape">
+            <img
+              src="{{.heros_shape_top_left | absURL}}"
+              alt=""
+              class="hero-shape-topLeft"
+            />
+            <img
+              src="{{.heros_shape_top_right | absURL}}"
+              alt=""
+              class="hero-shape-topRight"
+            />
+            <img
+              src="{{.heros_shape_bottom_left | absURL}}"
+              alt=""
+              class="hero-shape-bottomLeft"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}

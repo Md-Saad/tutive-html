@@ -1,0 +1,52 @@
+<!-- Mark up for Client Section-->
+{{ with .Site.Data.client}}
+{{ if .enable}}
+<section class="client" id="client">
+  <div class="client-shape-top">
+    <img src="{{.shape_top | absURL}}" alt="shape-top" />
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="section_header text-center">
+          <h2>Join 20,000+ Companies Accelerating Deals with Tuitive</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <ul class="list-inline client-list">
+          {{range .clients}}
+          <li class="list-inline-item client-list-items">
+            <img src="{{.image | absURL}}" alt="client 1" />
+          </li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Mark up for Video Section-->
+<section class="video" id="video">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="video-musking">
+          <img
+            src="{{.video_bg | absURL}}"
+            alt="video png"
+            class="video-img"
+          />
+          <div
+            class="video-button"
+            data-video="{{ .video_url}}"
+          >
+            <img src="{{.video_thumb | absURL}}" alt="video-icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}

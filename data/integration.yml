@@ -1,0 +1,13 @@
+---
+  title : "Seamless Integrations With Your Favorite Software"
+  enable : true
+  description : "Say goodbye to manual data entry. Integrate with the tools you depend on so your team can get proposals, contracts and quotes out the door fast."
+  url : "integration"
+  shapeCenter: "images/integration/shape_center.svg"
+  shapeLeftTop: "images/integration/shape_left_top.svg"
+  shapeLeftCenter: "images/integration/shape_left_center.svg"
+  shapeLeftBottom: "images/integration/shape_left_bottom.svg"
+  shapeRightTop: "images/integration/shape_right_top.svg"
+  shapeRightCenter: "images/integration/shape_right_center.svg"
+  shapeRightBottom: "images/integration/shape_right_bottom.svg"
+---

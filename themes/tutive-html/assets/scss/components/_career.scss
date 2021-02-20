@@ -1,0 +1,25 @@
+.career{
+  &-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    h3{
+        font-size: 24px;
+    }
+  }
+  &-post{
+    background: #FCF7EF;
+    border-radius: 20px;
+    padding: 0 30px;
+    &-item{
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+      .content{
+        flex: 1;
+      }
+    }
+    &-item:not(:last-child){
+        border-bottom: 1px solid #858585;
+    }
+  }
+}

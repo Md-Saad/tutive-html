@@ -1,0 +1,46 @@
+{{ with .Site.GetPage "section" "blog" }}
+<!-- Mark up for Blog Section-->
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-7">
+                <div class="section_header text-center">
+                    <h2>{{.Title}}</h2>
+                </div>
+            </div> 
+        </div>
+
+        <div class="row">
+          {{range first 3 ( where .Site.Pages "Type" "blog") }}
+            <div class="col-md-4">
+                <article class="blog_post">
+                    <img src="{{.Params.feature_image | absURL}}" alt="blog_post_1" class="blog_post_thumbnail">
+                    <div class="blog_post_body">
+                        <ul class="list-inline blog_post_meta">
+                            <li class="list-inline-item">
+                                <p>Posted by      
+                                    <span>{{ .Params.author}} </span></p>   
+                            </li>
+                            <li class="list-inline-item">
+                               <p>{{ .PublishDate.Format "2 January, 2006" }}</p> 
+                            </li>
+                        </ul>
+                        <h3 class="blog_post_title"><a href="{{.Permalink}}">{{.Title}}</a></h3>
+                        <p class="blog_post_summary">
+                            {{ truncate 100 .Summary }}
+                        </p>
+                    </div>
+                    <div class="blog_post_body-link">
+                        <a href="{{.Permalink}}" class="link_style blog_post_action stretched-link">Learn More 
+                            <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path class="right-arrow" fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div><!--End of Blog Items-->
+            {{end}}
+        </div>
+    </div>
+</section>
+{{end}}

@@ -1,0 +1,66 @@
+/* Style For Footer Sections*/
+.footer{
+  @include tablet{
+    text-align: center;
+  }
+  &_items{
+    margin-bottom: 70px;
+    h3{
+      margin-top: 7px;
+      margin-bottom: 15px;
+    }
+    &_list{
+      li{
+          margin-bottom: 10px;
+      }
+      a{
+          color: $text-color-header;
+          text-transform: capitalize;
+      }
+    }
+  }
+
+  &_bottom{
+    border-top:  1px solid #E4E4E4;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &_items{
+      p{
+          padding-top: 17px;
+      }
+    }
+    .fa {
+      padding: 13px;
+      font-size: 24px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 0 5px;
+      border-radius: 50%;
+      &:hover {
+          opacity: 0.7;
+      }
+            
+      &-facebook-f {
+          background: #3B5999;
+          color: white;
+      }
+          
+      &-twitter {
+          background: #55ACEE;
+          color: white;
+      }
+          
+      &-instagram {
+          background: #E4405F;
+          color: white;
+      }
+          
+      &-pinterest-p {
+          background: #BD081C;
+          color: white;
+      }
+    } 
+  }
+}

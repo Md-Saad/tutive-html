@@ -1,0 +1,126 @@
+{{with .Site.Data.pricePackages}}
+{{if .enable}}
+<!-- Mark up for Pricing Section-->
+<section class="price" id="price">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-9">
+              <div class="section_header text-center">
+                  <h2>{{.title}}</h2>
+                  <div class="price_time">
+                      <span>Billed Yearly</span>
+                      <label class="price_switch">
+                          <input type="checkbox" class="price_checkbox" checked>
+                          <span class="price_slider price_round"></span>
+                      </label>
+                      <span>Billed Monthly</span>
+                  </div>
+              </div>
+          </div> 
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+            {{range .EssentialPackages }}
+              <div class="price_items">
+                  <img src="{{ .icon | absURL}}" alt="ess_pack.svg" class="price_item_logo">
+                  <h3>{{.name}}</h3>
+                  <div class="price_amount">
+                      <p class="price_amount_month">{{.price_month | safeHTML}}</p>
+                      <p class="price_amount_year">{{.price_year | safeHTML}}</p>
+                  </div>
+                  <p class="price_details">
+                      {{ .description}}
+                  </p>
+                  <ul class="price_details_list">
+                    {{range .list}}
+                      <li>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9.511" height="13.417" viewBox="0 0 9.511 13.417">
+                              <path id="Path_351" data-name="Path 351" d="M4.548,3.836a1.508,1.508,0,0,1,2.622,0l5.2,6.5a1.508,1.508,0,0,1-1.311,2.252H.66A1.508,1.508,0,0,1-.65,10.332Z" transform="translate(12.584 0.85) rotate(90)" fill="#8a74ff"/>
+                          </svg>
+                          <span>{{.}}</span>
+                      </li>
+                      {{end}}
+                  </ul>
+
+                  <a href="{{ $.Site.Params.contactLink  | absURL }}" class="button price_button"> 
+                      Try free for 30 days
+                      <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path class="right-arrow" fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                      </svg>
+                  </a>
+              </div>
+            {{end}}
+          </div><!--End of Essential Package-->
+          
+          <div class="col-md-4">
+            {{range .BussinessPackages }}
+              <div class="price_items price_business">
+                  <img src="{{ .icon | absURL}}" alt="ess_pack.svg" class="price_item_logo">
+                  <h3>{{.name}}</h3>
+                  <div class="price_amount">
+                      <p class="price_amount_month">{{.price_month | safeHTML}}</p>
+                      <p class="price_amount_year">{{.price_year | safeHTML}}</p>
+                  </div>
+                  <p class="price_details">
+                      {{ .description}}
+                  </p>
+                  <ul class="price_details_list">
+                      {{range .list}}
+                      <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9.511" height="13.417" viewBox="0 0 9.511 13.417">
+                          <path id="Path_356" data-name="Path 356" d="M4.548,3.836a1.508,1.508,0,0,1,2.622,0l5.2,6.5a1.508,1.508,0,0,1-1.311,2.252H.66A1.508,1.508,0,0,1-.65,10.332Z" transform="translate(12.584 0.85) rotate(90)" fill="#fff"/>
+                        </svg>   
+                          <span>{{.}}</span>
+                      </li>
+                      {{end}}
+                  </ul>
+
+                  <a href="{{ $.Site.Params.contactLink  | absURL }}" class="button-light  price_button"> 
+                      Try free for 30 days
+                      <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path class="right-arrow" fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                      </svg>
+                  </a>
+              </div>
+            {{end}}
+          </div><!--End of Business Package-->
+
+          <div class="col-md-4">
+            {{range .EconomyPackages }}
+            <div class="price_items">
+                <img src="{{ .icon | absURL}}" alt="ess_pack.svg" class="price_item_logo">
+                <h3>{{.name}}</h3>
+                <div class="price_amount">
+                    <p class="price_amount_month">{{.price_month | safeHTML}}</p>
+                    <p class="price_amount_year">{{.price_year | safeHTML}}</p>
+                </div>
+                <p class="price_details">
+                    {{ .description}}
+                </p>
+                <ul class="price_details_list">
+                  {{range .list}}
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9.511" height="13.417" viewBox="0 0 9.511 13.417">
+                            <path id="Path_351" data-name="Path 351" d="M4.548,3.836a1.508,1.508,0,0,1,2.622,0l5.2,6.5a1.508,1.508,0,0,1-1.311,2.252H.66A1.508,1.508,0,0,1-.65,10.332Z" transform="translate(12.584 0.85) rotate(90)" fill="#8a74ff"/>
+                        </svg>
+                        <span>{{.}}</span>
+                    </li>
+                    {{end}}
+                </ul>
+
+                <a href="{{ $.Site.Params.contactLink | absURL }}" class="button price_button"> 
+                    Try free for 30 days
+                    <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path class="right-arrow" fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                    </svg>
+                </a>
+            </div>
+          {{end}}
+          </div><!--End of Enterprise Package-->
+
+      </div>
+  </div>
+</section>
+
+{{end}}
+{{end}}

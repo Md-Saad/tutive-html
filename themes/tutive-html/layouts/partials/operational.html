@@ -1,0 +1,35 @@
+{{with .Site.Data.operationals}}
+{{if .enable }}
+<!-- Mark up for Operationals Section-->
+<section class="operationals" id="operationals">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-10 justify-content-center ">
+              <div class="section_header text-center ">
+                  <h2> {{ .title }}</h2>
+              </div>
+          </div>
+      </div>
+
+      <div class="row operationals_cards">
+        {{range .items}}
+          <div class="col-sm-6 col-lg-3 operationals_card_item">
+              <div class="card ">
+                  <img src="{{.icon | absURL}}" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                      <h3 class="card-title">{{.heading}}</h3>
+                      <p class="card-text">{{.desc}}</p>
+                      <a href="{{.url | absURL}}" class="link_style stretched-link">Learn More 
+                          <svg width="15px" height="15px" viewBox="0 0 16 16"  class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path class="right-arrow" fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+        {{end}}
+      </div>
+  </div>
+</section>
+{{end}}
+{{end}}

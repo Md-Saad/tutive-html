@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="174" height="174" viewBox="0 0 174 174">
+  <g id="Group_1264" data-name="Group 1264" transform="translate(-1403 -3633)">
+    <circle id="Ellipse_1207" data-name="Ellipse 1207" cx="87" cy="87" r="87" transform="translate(1403 3633)" fill="#fb856c" opacity="0.7"/>
+    <g id="Group_38" data-name="Group 38" transform="translate(0 773)">
+      <rect id="Rectangle_181" data-name="Rectangle 181" width="74" height="97" rx="10" transform="translate(1453 2899)" fill="#fff"/>
+      <rect id="Rectangle_205" data-name="Rectangle 205" width="64" height="97" rx="10" transform="translate(1458 2904)" fill="#fff" opacity="0.4"/>
+      <rect id="Rectangle_199" data-name="Rectangle 199" width="38" height="70" rx="7" transform="translate(1461 2913)" fill="#ffcec4"/>
+      <path id="Rectangle_201" data-name="Rectangle 201" d="M7,0H31a7,7,0,0,1,7,7v7a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V7A7,7,0,0,1,7,0Z" transform="translate(1461 2913)" fill="#ffbcae"/>
+      <path id="Rectangle_203" data-name="Rectangle 203" d="M0,0H38a0,0,0,0,1,0,0V7a7,7,0,0,1-7,7H7A7,7,0,0,1,0,7V0A0,0,0,0,1,0,0Z" transform="translate(1461 2969)" fill="#ffbcae"/>
+      <rect id="Rectangle_200" data-name="Rectangle 200" width="40" height="28" rx="7" transform="translate(1483 2934)" fill="#ffa997"/>
+      <rect id="Rectangle_202" data-name="Rectangle 202" width="14" height="3" rx="1.5" transform="translate(1473 2919)" fill="#fff"/>
+      <circle id="Ellipse_1208" data-name="Ellipse 1208" cx="4" cy="4" r="4" transform="translate(1476 2972)" fill="#fff"/>
+      <circle id="Ellipse_1209" data-name="Ellipse 1209" cx="4" cy="4" r="4" transform="translate(1489 2938)" fill="#fff"/>
+      <circle id="Ellipse_1210" data-name="Ellipse 1210" cx="4" cy="4" r="4" transform="translate(1494 2938)" fill="#fff"/>
+      <circle id="Ellipse_1211" data-name="Ellipse 1211" cx="2" cy="2" r="2" transform="translate(1496 2940)" fill="#ffa997"/>
+      <circle id="Ellipse_1212" data-name="Ellipse 1212" cx="2" cy="2" r="2" transform="translate(1491 2940)" fill="#ffa997"/>
+      <rect id="Rectangle_204" data-name="Rectangle 204" width="25" height="3" rx="1.5" transform="translate(1489 2950)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

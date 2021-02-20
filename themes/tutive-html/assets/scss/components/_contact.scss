@@ -1,0 +1,169 @@
+/* Style for Contact page and Section*/
+%contact_shape{
+  position: absolute;
+  content: '';
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  z-index: -1;
+  @include desktop-lg{
+    height: 75px;
+    width: 75px;
+  }
+  @include desktop{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.contact_address{
+  padding-top: 0;
+  padding-bottom: 0;
+  &_item_thumbnail{
+    padding: 50px;
+    img.card-img-top{
+        padding: 0;
+    }
+  }
+  &_item{
+    .card-body {
+      padding: 25px 50px;
+      margin-top: 0;
+      p{
+          margin-bottom: 0;
+      }
+    }
+  }
+}
+.contact{
+  padding-top: 125px;
+  padding-bottom: 125px;
+  &_form{
+      h2{
+        font-size: 40px;
+        color:#282F49;
+        margin-bottom: 50px;
+      }
+      .form-group{
+        margin-bottom: 30px;;
+      }
+      .form-control{
+        height:55px;
+        border: 1px solid #AEB8BE;
+        border-radius: 7px;
+        color: $text-color;
+        &:focus{
+          border: 1px solid $secondary-color;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+      .custom-file-label{
+        height: 55px;
+        padding-top:16px;
+        border: 1px solid #AEB8BE;
+        border-radius: 7px;
+        color: #858585;
+        &:after{
+          height: 53px;
+          padding-top:16px;
+          display: none;
+        }
+      }
+      textarea{
+        min-height: 150px;
+      }
+      ::-webkit-input-placeholder { /* Edge */
+        color:$text-color;
+      }
+        
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $text-color;
+      }
+        
+      ::placeholder {
+        color: $text-color;
+      }
+    .form-check{
+        padding: 0;
+        margin-bottom: 30px;
+        margin-top: -10px;
+        &-input{
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+        }
+        &-label{
+          position: relative;
+          cursor: pointer;
+          &::before{
+            content:'';
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 1px solid #AEB8BE;
+            height: 20px;
+            width: 20px;
+            border-radius: 4px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 8px;
+          }  
+        }
+      input:checked + label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 7px;
+        width: 6px;
+        height: 12px;
+        border: solid #0079bf;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  #map {
+    border-radius: 30px;
+    height: 100%;
+    @include tablet{
+        margin-top: 20px;
+        height: 400px;
+    }
+  }
+  &_map{
+    &:after{
+      @extend %contact_shape;
+      background: #FCF9F5;;
+      top:-40px;
+      left:-40px;
+      @include desktop-lg{
+          top:-20px;
+          left:-20px;
+      }
+      @include desktop{
+          top:-15px;
+          left:0px;
+      }
+    }
+    &:before{
+      @extend %contact_shape;
+      background:#F3FAFD;
+      bottom:-40px;
+      right:-40px;
+      @include desktop-lg{
+          bottom:-30px;
+          right:-7px;
+      }
+      @include desktop{
+          bottom:-15px;
+          right:0px;
+      }
+    }
+  }  
+}

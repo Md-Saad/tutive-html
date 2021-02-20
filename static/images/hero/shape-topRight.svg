@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="363" height="363" viewBox="0 0 363 363">
+  <defs>
+    <filter id="Rectangle_3" x="0" y="0" width="363" height="363" filterUnits="userSpaceOnUse">
+      <feOffset dy="43" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="33" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_12" data-name="Group 12" transform="translate(-1388 -144)">
+    <g transform="matrix(1, 0, 0, 1, 1388, 144)" filter="url(#Rectangle_3)">
+      <rect id="Rectangle_3-2" data-name="Rectangle 3" width="165" height="165" rx="20" transform="translate(99 56)" fill="#fff"/>
+    </g>
+    <g id="Group_10" data-name="Group 10" transform="translate(162.756 -125.315)">
+      <path id="Path_77" data-name="Path 77" d="M506.418,392.223,490.067,364.8a13.819,13.819,0,0,1,11.869-20.9h32.7a13.819,13.819,0,0,1,11.869,20.9l-16.351,27.424A13.819,13.819,0,0,1,506.418,392.223Z" transform="translate(888.369 11.555)" fill="#f490a4"/>
+      <path id="Path_78" data-name="Path 78" d="M618.2,386.173c-6.791-2.639-23.983-8.654-27.262-3.311-2.738,4.461,9.08,13.306,18.329,19.312" transform="translate(818.258 -13.643)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_79" data-name="Path 79" d="M657.48,353.134a2.977,2.977,0,0,0-2.142,1.277c-1.291,2.733,3.993,8.451,7.317,11.669" transform="translate(774.039 5.238)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_97" data-name="Path 97" d="M521.5,388.719c6.669.03,12.349-.99,13.669-4.282,3.59-8.954-23.479-28.217-21.857-30.558s10.339-.074,11.585-2.732c.748-1.6.038-4.34-1.144-7.15" transform="translate(871.156 11.491)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="80" height="8" rx="4" transform="translate(1530 306)" fill="#dbdce6"/>
+    <rect id="Rectangle_105" data-name="Rectangle 105" width="40" height="8" rx="4" transform="translate(1550 324)" fill="#323c79"/>
+  </g>
+</svg>

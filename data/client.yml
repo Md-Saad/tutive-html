@@ -1,0 +1,15 @@
+---
+  title: Join 20,000+ Companies Accelerating Deals With Tuitive
+  enable : true
+  shape_top: "images/client/shape-top.svg"
+  video_bg : "images/video/vid_bg.png"
+  video_thumb : "images/video/video.svg"
+  video_url : "https://www.youtube.com/embed/a6KGPBflhiM?autoplay=1&mute=1"
+  clients: 
+    - image: "images/client/Drift-Logo.svg"
+    - image: "images/client/km_bizhub_logo.svg"
+    - image: "images/client/hilton_logo.svg"
+    - image: "images/client/Tata_Steel_Logo.svg"
+    - image: "images/client/SGS_Logo.svg"
+    - image: "images/client/TomTom_RGB_logo.svg"
+---

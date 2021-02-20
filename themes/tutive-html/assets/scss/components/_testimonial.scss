@@ -1,0 +1,111 @@
+/* Style For Testimonial Sections*/
+.testimonial{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .section_header{
+        margin-bottom: 50px;
+        .star_total{
+            margin-top: 15px;
+            margin-bottom: 30px;
+            a{
+                font-weight: 600;
+                margin-left: 10px;
+            }
+        }
+    }
+    &_avator{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #c8cfd3;
+        font-weight: 600;
+        color: #fff;
+    }
+    &_card_review{
+        &_container{
+            padding: 30px;
+            box-shadow: 0 0px 12px rgba(0, 0, 0, 0.06);
+            border-radius: 20px;
+            margin: 10px;
+        }
+        &_header{
+            margin-bottom: 15px;
+        }
+        &_content{
+            margin-bottom: 30px;
+            min-height: 250px;
+            a{
+                color: $text-color-link;
+            }
+        }
+        &_footer{
+            h5{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    &_slider{
+        .slick-prev{
+          left:-50px;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          z-index: 111;
+          background:  #ffffff;
+          @include box-shadow(0, 20px, 30px, rgba(0, 0, 0, 0.06));
+          transition: all 1s ease;
+          &:hover{
+            background:  $secondary-color;
+            &:before{
+              color:#fff;
+            }
+          }
+          @include desktop-lg{
+            left:-25px;
+          }
+        }
+        .slick-next {
+          right:-50px;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          z-index: 111;
+          background: #ffffff;
+          @include box-shadow(0, 20px, 30px, rgba(0, 0, 0, 0.06));
+          transition: all 1s ease;
+          &:hover{
+            background:  $secondary-color;
+            &:before{
+              color:#fff;
+            }
+          }
+          @include desktop-lg{
+            right:-25px;
+          }
+        }
+        .slick-prev:before, .slick-next:before {
+          font-family: 'FontAwesome';
+          font-size: 30px;
+          color: #000000;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          transition: all 0.2s ease;
+        }
+    }
+    @include desktop{
+        .button-light{
+            width: auto;
+            padding: 15px 20px;
+        }
+    }
+}

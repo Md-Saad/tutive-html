@@ -1,0 +1,128 @@
+/* Style For Hero Banner Sections*/
+.hero {
+  position: relative;
+  padding: 180px 0 20px;
+  overflow: hidden;
+  @include desktop{
+    padding: 100px 0 20px;
+    text-align: center;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #fbf6ee;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.6;
+    @include tablet{
+      width: 350px;
+      height: 350px;
+    }
+  }
+  &-content {
+    margin-top: -120px;
+    h1 {
+      font-size: 60px;
+      line-height: 70px;
+      letter-spacing: 1.5;
+      span {
+        color: $primary-color;
+      }
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      color: $text-color-header;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+    @include desktop{
+      margin-top: 0;
+      text-align: left;
+      h1{
+        font-size: 36px;
+        line-height: 36px;
+      }
+      ul{
+        li{
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  &-figure {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    &-image{
+      @include desktop{
+        width: 100%;
+      }
+    }
+  }
+  &-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &-topLeft {
+      position: absolute;
+      left: -23%;
+      top: -12%;
+      width: 250px;
+      height: 250px;
+      @include desktop{
+        width: 150px;
+        height: 150px;
+      }
+      @include tablet{
+        top: 0;
+        left:-50px;
+      }
+    }
+    &-topRight {
+      position: absolute;
+      right: -30%;
+      top: -10%;
+      width: 250px;
+      height: 250px;
+      @include desktop{
+        right: -10%;
+        width: 150px;
+        height: 150px;
+      }
+      @include tablet{
+        top: 0;
+      }
+    }
+    &-bottomLeft {
+      position: absolute;
+      left: -13%;
+      bottom: 0%;
+      width: 300px;
+      height: 300px;
+      z-index: -1;
+      @include desktop{
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}

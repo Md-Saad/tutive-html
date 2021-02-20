@@ -1,0 +1,151 @@
+/* Style For Price Sections */
+.price{
+	padding-top: 150px;
+	padding-bottom: 150px;
+	@include desktop{
+		padding-top:50px;
+		padding-bottom: 50px;
+	}
+	&_time{
+		margin-top:50px;
+		margin-bottom:70px;
+		span:not(.price_slider){
+			display: inline-block;
+			font-size: 16px;
+			font-weight: 600;
+			margin: 0 30px;
+			@include tablet{
+				margin: 0 15px;
+			}
+		}
+		@include desktop{
+			margin-top:15px;
+			margin-bottom: 15px;
+		}
+	}
+	&_items{
+		background: #fff;
+		@include box-shadow(0, 43px, 66px, rgba(0,0,0,.08));
+		padding:35px ;
+		border-radius: 30px;
+		img{
+			border-radius: 20px;
+		}
+		h3{
+			font-size: 30px;
+			padding: 15px 0 5px;
+		}
+		.price_amount{
+			span{
+				font-size: 20px;
+				font-weight: 600;
+				color: $secondary-color;
+			}
+			.price_amount_month{
+				display: none;
+			}
+			.price_amount_year{
+				display: block;
+			}
+		}
+		@include desktop{
+			h3{
+				font-size: 18px;
+			}
+		}
+	}
+	//pricing change into monthly to yearly
+	.price_amount_active{
+		.price_amount_month{
+			display: block;
+		}
+		.price_amount_year{
+			display: none;
+		}
+	}
+
+	&_details_list{
+		margin: 25px 0;
+		li{
+			margin: 15px 0; 
+			color: $text-color-header;
+			font-size: 15px;
+			span{
+				margin-left: 7px;
+			}
+			@include desktop{
+				margin-top:00px10px 0;
+				font-size: 14px;
+			}
+		}
+	}
+
+	&_business{
+		background: $primary-color;
+		h3{
+			color: #fff;
+		}
+		p{
+			color: #fff;
+		}
+		span{
+			color:#fff !important;
+		}
+	}
+	//Toggle button Style
+	&_switch {
+		position: relative;
+		display: inline-block;
+		width: 68px;
+		height: 30px;
+		input { 
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+	}
+		
+	&_slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color:$secondary-color;
+		-webkit-transition: .4s;
+		transition: .4s;
+		&:before{
+			position: absolute;
+			content: "";
+			height: 18px;
+			width: 18px;
+			left: 6px;
+			bottom: 6px;
+			background-color: white;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+	}
+
+	input:checked + .price_slider {
+		background-color: $secondary-color;
+	}
+	input:focus + .price_slider {
+		box-shadow: 0 0 1px $secondary-color;
+	}
+	input:checked + .price_slider:before {
+		-webkit-transform: translateX(40px);
+		-ms-transform: translateX(40px);
+		transform: translateX(40px);
+	}
+	
+	/* Rounded sliders */
+	.price_slider.price_round {
+		border-radius: 34px;
+	}
+	
+	.price_slider.price_round:before {
+		border-radius: 50%;
+	}
+}

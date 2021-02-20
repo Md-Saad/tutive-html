@@ -1,0 +1,84 @@
+<!-- Mark up for Navigation Footer Section-->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="d-none d-md-block col-md-3">
+        <div class="footer_items">
+          <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.footerlogo | absURL}}" alt="logo"></a>
+        </div>
+      </div><!--End of footer Items-->
+
+        <div class="col-6 col-md-3">
+        <div class="footer_items">
+          <h3>Integrations</h3>
+          <ul class="footer_items_list">
+            {{ range first 5 (where $.Site.RegularPages "Type" "integration") }}
+              <li>
+                  <a href="{{.Permalink}}"> {{ .Title}} </a>
+              </li>
+            {{end}}
+          </ul>
+        </div>
+        </div><!--End of footer Items-->
+
+        <div class="col-6 col-md-3">
+            <div class="footer_items">
+                <h3>Solutions</h3>
+                <ul class="footer_items_list">
+                  {{ range first 5 (where $.Site.RegularPages "Type" "solution") }}
+                  <li>
+                      <a href="{{.Permalink}}"> {{ .Title}} </a>
+                  </li>
+                {{end}}
+                </ul>
+            </div>
+        </div><!--End of footer Items-->
+        <div class="col-6 col-md-3">
+            <div class="footer_items">
+                <h3>Company</h3>
+                <ul class="footer_items_list">
+                   {{range .Site.Menus.sitemap}}
+                    <li>
+                        <a href="{{.URL | absURL}}">{{.Name}}</a>
+                    </li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Area -->
+    
+    <div class="row footer_bottom clearfix">
+      <div class="col-md-6">
+          <div class="footer_bottom_items">
+              <p>	{{.Site.Params.copyright}}</p>
+          </div>
+      </div><!--End of footer Items-->
+
+      <div class="col-md-6">
+        <div class="footer_bottom_items float-md-right">
+          <ul class="social_link list-inline">
+              {{range .Site.Params.Footer.social.link}}
+              <li class="list-inline-item ">
+                  <a href="{{.url | absURL}}"><i class="fa {{.icon}}"></i></a>
+              </li>
+              {{end}}
+          </ul>
+        </div>
+      </div><!--End of footer Items-->
+
+    </div>
+  </div>
+</footer>
+
+
+<!-- Mark up for Script Section-->
+<script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.map.APIkey}}&libraries=geometry"></script>
+<script src="{{"plugins/jQuery/jquery.min.js" | absURL }}"></script>
+<script src="{{"plugins/bootstrap/popper.js" | absURL }}"></script>
+<script src="{{"plugins/bootstrap/bootstrap.min.js" | absURL }}"></script>
+<script src="{{"plugins/slick/slick.min.js" | absURL }}"></script>
+<script src="{{"plugins/scrollspy/scrollspy.js" | absURL }}"></script>
+{{ $script := resources.Get "js/script.js" | minify}} 
+<script src="{{ $script.Permalink}}"></script>

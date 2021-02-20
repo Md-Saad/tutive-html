@@ -1,0 +1,27 @@
+---
+  title : "Fair Pricing to Keep Your Business Growing"
+  enable : true
+  EssentialPackages:
+    - name: "Essential pack"
+      description: "Create docs with templates or the built-in editor. Collect eSignatures and track docs in real-time too."
+      icon: "images/price/ess_pack.svg"
+      price_month: "<span>$20</span> /month"
+      price_year: "<span>$70</span> /year"
+      list: ["Templates","CRM integrations","Content library","Content library"]
+
+  BussinessPackages:
+    - name: "Bussiness pack"
+      description: "Create docs with templates or the built-in editor. Collect eSignatures and track docs in real-time too."
+      icon: "images/price/busi_pack.svg"
+      price_month: "<span>$30</span> /month"
+      price_year: "<span>$80</span> /year"
+      list: ["Templates","CRM integrations","Content library","Content library"]
+
+  EconomyPackages:
+    - name: "Economy pack"
+      description: "Create docs with templates or the built-in editor. Collect eSignatures and track docs in real-time too."
+      icon: "images/price/en_pack.svg"
+      price_month: "<span>$40</span> /month"
+      price_year: "<span>$100</span> /year"
+      list: ["Templates","CRM integrations","Content library","Content library"]
+---

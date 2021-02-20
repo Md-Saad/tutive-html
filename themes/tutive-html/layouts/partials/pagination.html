@@ -1,0 +1,25 @@
+<div class="col-12">
+  <div class="blog-pagination">
+    {{ $pagination := $.Paginator }}
+    {{ if gt $pagination.TotalPages 1 }}
+    <nav>
+      <ul class="pagination pagination-lg justify-content-center">
+        {{ if $pagination.HasPrev }}
+        <li class="page-item"><a href="{{ $pagination.Prev.URL }}" rel="prev" class="page-link"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+        {{ end }}
+        {{ range $pagination.Pagers }}
+        {{ if eq . $pagination }}
+        <li class="page-item active"><a href="{{ .URL }}" class="page-link">{{ .PageNumber }}</a></li>
+        {{ else }}
+        <li class="page-item"><a href="{{ .URL }}" class="page-link">{{ .PageNumber }}</a></li>
+        {{ end }}
+        {{ end }}
+
+        {{ if $pagination.HasNext }}
+        <li class="page-item"><a href="{{ $pagination.Next.URL }}" rel="next" class="page-link"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+        {{ end }}
+      </ul>
+    </nav>
+    {{end}}
+  </div>
+</div>

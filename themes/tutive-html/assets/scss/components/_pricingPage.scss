@@ -1,0 +1,34 @@
+/* Style For Pricing Page */
+.price_page{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  &_security{
+    &_img{
+      padding-left:100px;
+    }
+  }
+}
+.pricing_table{
+  p{
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  &_icon_addon{
+    fill:$text-color;
+    margin-left: 3px;
+  }
+  &_icon{
+    fill:$text-color;
+  }
+  &_item{
+    margin-top: 50px;;
+    margin-bottom: 150px;
+  }
+  .table{
+    @include tablet{
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+    }
+  }
+}

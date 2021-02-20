@@ -1,0 +1,36 @@
+.job{
+  padding-top:150px;
+  &-heading{
+    background: #FCF7EF;
+    padding: 20px 30px;
+    border-radius: 20px;
+    &-content{
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+    }
+    &-title{
+      flex: 1;
+    }
+  }
+  &-description{
+    p{
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  .contact_form{
+    h2{
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+  }
+  &-description{
+    ul{
+      padding: 0 20px;
+      li{
+        list-style-type: disc;
+      }
+    }
+  }
+}

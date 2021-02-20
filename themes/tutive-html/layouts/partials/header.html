@@ -1,0 +1,39 @@
+<!-- Mark up for Site Navigation Section-->
+<header class="header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a href="{{.Site.BaseURL}}" class="navbar-brand">
+        <img src="{{ .Site.Params.logo | absURL}}" alt="site-logo" />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler collapsed"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navbarCollapse"
+      >
+        <ul class="nav navbar-nav">
+          {{ $currentPage := . }}
+          {{ $menu := .Site.Menus.main}}
+          {{range $index, $element := $menu}}
+          <li class="nav-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}">
+             <a class="nav-link" href="{{.URL | absURL}}">{{.Name}}</a>
+          </li>
+          {{end}}
+        </ul>
+        <div class="navbar-nav">
+          <a href="{{ .Site.Params.login | absURL}}" class="log_in mr-xl-5">Log In</a>
+          <a href="{{ .Site.Params.contactLink | absURL}}" class="button-dark hire_button">Start 14 Days Trial</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

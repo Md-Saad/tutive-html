@@ -1,0 +1,17 @@
+.error-page{
+  position: relative;
+  height: 100vh;
+  padding-top: 0;
+  padding-bottom: 0;
+  img{
+    width: 100%;
+  }
+  @include tablet{
+    img{
+        width: 85%;
+    }
+    .hero_inner_page_content{
+        text-align: center;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.integration_page_single{
+  padding-top: 120px;
+  .hero_inner_page{
+    margin-top: 0;
+    padding-top:0;
+    img{
+      width:150px;
+      float: right;
+      @include tablet{
+          float: none;
+      }
+    }
+  }
+  &_description{
+    margin-top: 100px;
+    &_items{
+        margin: 30px 0;
+    }
+  }
+}

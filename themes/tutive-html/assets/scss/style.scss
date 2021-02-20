@@ -1,0 +1,90 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+PROJECT:	Tutive HTML
+-------------------------------------------------------------------*/
+/* ====== index =====
+1. COMMON
+2. Site-Navigation
+3. Hero
+4. Client
+5. Video
+6. Services
+7. Operationals
+8. Integration
+9. Price
+10. Team
+11. Blog
+12. Call To Actions
+13. Page Title
+14. Contact
+15. Solutions
+16. Pricing Page
+17. Hero Inner Page
+18. Testimonial
+19. Integration Page
+20. Integration Page Single
+21. Career
+22. Career-Single
+23. Footer
+
+===================== */
+
+@import "mixins";
+
+@import "variables";
+
+@import "media-query";
+
+@import "common";
+
+@import "typography";
+
+@import "buttons";
+
+@import "components/navigation";
+
+@import "components/hero";
+
+@import "components/client";
+
+@import "components/video";
+
+@import "components/service";
+
+@import "components/operationals";
+
+@import "components/integration";
+
+@import "components/price";
+
+@import "components/team";
+
+@import "components/blog";
+
+@import "components/callToAction";
+
+@import "components/page_title";
+
+@import "components/contact";
+
+@import "components/solutions";
+
+@import "components/pricingPage";
+
+@import "components/heroInnerPage";
+
+@import "components/testimonial";
+
+@import "components/integrationPage";
+
+@import "components/integrationPageSingle";
+
+@import "components/error";
+
+@import "components/login";
+
+@import "components/career";
+
+@import "components/career-single-page";
+
+@import "components/footer";

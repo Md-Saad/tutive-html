@@ -1,0 +1,18 @@
+---
+  title : "We’re Building a Diverse Team."
+  enable : true
+  description: "Lorem ipsum dolor it consetur sadipscing elitr diam nonumy eimod tempor invidunt labore et dolore. magna aliquyam."
+  team_members:
+    - name: "Jona Gerhard"
+      designation: "Director"
+      image : "images/team/team_member1.png"
+    - name: "Jona Gerhard"
+      designation: "manager"
+      image : "images/team/team_member2.png"
+    - name: "Jona Gerhard"
+      designation: "Director"
+      image : "images/team/team_member3.png"
+    - name: "Jona Gerhard"
+      designation: "manager"
+      image : "images/team/team_member4.png"
+---
