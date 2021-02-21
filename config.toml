@@ -12,7 +12,7 @@ title = "tutive"
 
   [[menu.Main]]
   name = "Solutions"
-  url= "/solutions/"
+  url= "/solution/"
   weight = 2
   [[menu.Main]]
   name = "Pricing"
@@ -38,7 +38,7 @@ title = "tutive"
   weight = 1
   [[menu.sitemap]]
   name = "Solutions"
-  url = "/solutions/"
+  url = "/solution/"
   weight = 1
   [[menu.sitemap]]
   name = "Pricing"

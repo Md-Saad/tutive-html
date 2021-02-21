@@ -1,0 +1,30 @@
+---
+  title : "Read Reviews From Real Customers"
+  enable : true
+  testimonial_feature: 
+    - name:  "Saves Tons of time"
+      star: 2
+      description: >
+        "I used to hate writing proposals and procrastinate until the 9th hour but now that 
+        I have PandaDoc, I really do create my proposals in minimal time."
+
+    - name:  "Robust platform"
+      star: 3
+      description: >
+        "It’s super easy to use. You can upload a contract or proposals, assign fields 
+        and send it in a couple minutes. Oh, I also love getting notified when others are 
+        viewing the documents so I can reach out if they…"
+
+    - name:  "Marrs Tution"
+      star: 5
+      description: >
+        "I used to hate writing proposals and procrastinate until the 9th hour but now that 
+        I have PandaDoc, I really do create my proposals in minimal time."
+
+    - name:  "Tutive HTML"
+      star: 4
+      description: >
+        "It’s super easy to use. You can upload a contract or proposals, assign fields 
+        and send it in a couple minutes. Oh, I also love getting notified when others are 
+        viewing the documents so I can reach out if they…"
+---

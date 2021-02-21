@@ -1,0 +1,72 @@
+{{with .Site.Data.testimonial}}
+{{if .enable}}
+<!-- Mark up for All Team Members Section-->
+<section class="testimonial" id="testimonial">
+  <div class="container">
+      <div class="row ">
+          <div class="col-sm-12">
+              <div class="section_header text-center">
+                  <h2>{{.title}}</h2>
+                  <div class="star_total">
+                      <svg width="92" height="15" viewBox="0 0 92 15"><title>4.5 stars out of 5</title>
+                          <path fill="#e5593c" d="M8,12,3.3,14.47l.9-5.23L.39,5.53l5.26-.77L8,0l2.35,4.76,5.26.77L11.8,9.24l.9,5.23Zm19,0-4.7,2.47.9-5.23L19.39,5.53l5.26-.77L27,0l2.35,4.76,5.26.77L30.8,9.24l.9,5.23Zm19,0-4.7,2.47.9-5.23L38.39,5.53l5.26-.77L46,0l2.35,4.76,5.26.77L49.8,9.24l.9,5.23Zm19,0-4.7,2.47.9-5.23L57.39,5.53l5.26-.77L65,0l2.35,4.76,5.26.77L68.8,9.24l.9,5.23ZM91.61,5.53l-5.26-.77L84,0,81.65,4.76l-5.26.77L80.2,9.24,79.38,14l-.08.47.9-.47L84,12l4.7,2.47-.9-5.23ZM84,10.87V2.26l1.69,3.42,3.77.55L86.73,8.89l.64,3.75Z"></path>
+                      </svg>
+                      <a href="#" class="stars-total__link button-text button-text--small" target="_blank" rel="noopener">
+                          {{ len .testimonial_feature}} Total Reviews
+                      </a>
+                  </div>
+                  <div class="hero-buttons">
+                      <a href="#" class="button-light"> Write a review</a>
+                  </div>  
+              </div>
+          </div>
+      </div>
+      <div class="row ">
+          <div class="col-12">
+              <div class="testimonial_slider">
+                {{ $section := .testimonial_feature }}
+                    {{ range  first 5 $section }}
+                  <article class="testimonial_card_review">
+                      <div class="testimonial_card_review_container">
+                          <div class="testimonial_card_review_header clearfix">
+                            {{ if .star }}
+                            <ul class="testimonial_slider-rating list-inline">
+                                {{ $rating := .star | int }}
+                                {{ $rating := sub $rating 1 }}
+                                {{ range $i, $sequence := (seq 5) }}
+                                {{ if le $i $rating }}
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                {{ else }}
+                                <li class="list-inline-item"><i class="fa fa-star inactive"></i></li>
+                                {{ end }}
+                                {{ end }}
+                            </ul>
+                            {{ end }}
+                              
+                            <svg class="card_review_logo pull-right" width="25" height="25" viewBox="0 0 25 25"><title>G2</title><path fill="#c1c1c1" d="M12.5,0A12.64,12.64,0,0,1,15,.24H15L12.53,5.44h0a7.06,7.06,0,1,0,4.6,12.41h0l0,0,2.75,4.76,0,0A12.39,12.39,0,0,1,12.5,25a12.5,12.5,0,0,1,0-25Zm8.74,10.67v0l3.1,5.36L21.21,21.5,18.1,16.11H11.88L15,10.67ZM18.9.89a3.27,3.27,0,0,1,2,.63,2.07,2.07,0,0,1,.86,1.76c0,1.1-.57,1.86-1.9,2.54h0l-.69.35c-.74.37-1.05.69-1.15,1.18h3.71V9H16V8.69a4.56,4.56,0,0,1,.58-2.4,4.84,4.84,0,0,1,2-1.69h0l.43-.21c.79-.4,1-.72,1-1.09s-.41-.78-1-.78A1.91,1.91,0,0,0,17.2,3.75h0l0,.07L16,2.66l0,0a3,3,0,0,1,1.14-1.25A3.17,3.17,0,0,1,18.9.89Z"></path></svg>
+                          </div>
+                          <div class="testimonial_card_review_content">   
+                              <h4>
+                                  {{.name}}
+                              </h4>
+                              <p >
+                                  {{.description}}
+                              </p>
+                              <a href="#">Read More</a>
+                          </div>
+                          <div class="testimonial_card_review_footer">
+                              <div class="testimonial_avator">
+                                  CT
+                              </div>
+                              <h5 >Coly Turey</h5>
+                          </div>
+                      </div>
+                  </article><!--Testimonial slider Item-->
+                  {{end}}
+              </div>
+          </div>    
+      </div>
+  </div>
+</section>
+{{end}}
+{{end}}

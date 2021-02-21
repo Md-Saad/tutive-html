@@ -1,0 +1,84 @@
+{{define "main"}}
+
+<!-- Mark up for Hero Section for inner page-->
+<section class="hero_inner_page" id="hero_inner_page">
+  <div class="container">
+      <div class="row justify-content-center align-items-center">
+          <div class="col-md-5">
+              <div class="hero_inner_page_content">
+                  <h1>{{ .Params.heading}}</h1>
+                  <p>{{ .Params.subHeading}}</p>
+              </div>
+              <div class="hero_inner_page-buttons clearfix">
+                  <a href="{{ $.Site.Params.contactLink | absURL }}" class="button-light"> Start 14 Days Trial</a>
+                  <a href="{{ $.Site.Params.contactLink | absURL }}" class="button"> Request A Demo</a>
+                  <p>{{ .Params.footNote}}</p>
+              </div>    
+          </div>
+
+          <div class="col-md-6 ml-auto">
+              <div class="hero_inner_page_figure text-center">
+                  <img src="{{ .Params.feature_image | absURL}}" alt="hero_inner_page_solution.png" class="">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+{{partial "client.html" .}}
+
+<!-- Mark up for Solution page Section-->
+<section class="solutions" id="solutions">
+  <div class="container">
+  {{ range .Params.features}}
+    {{if .featureArea }}
+      <div class="row justify-content-center align-items-center ">
+          <div class="col-md-5">
+              <div class="section_header_inner_page">
+                  <h3>{{.featureTitle}}</h3>
+                  <P>{{.description}}</P>
+                  <a href="{{ .Site.BaseURL }}" class="link_style">Sign up for a 1-on-1 demo
+                      <svg width="15px" height="15px" viewBox="0 0 16 16"  class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path class="right-arrow" fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+          <div class="col-md-6  ml-auto">
+              <div class="solutions_section_pic m-auto">
+                  <img src="{{.image | absURL }}" alt="">
+              </div>
+          </div>
+      </div><!-- sloution section quotes--> 
+
+    {{else }}
+      <div class="row justify-content-center align-items-center ">
+        <div class="col-md-6  ml-auto">
+            <div class="solutions_section_pic m-auto">
+                <img src="{{.image | absURL }}" alt="">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="section_header_inner_page">
+                <h3>{{.featureTitle}}</h3>
+                <P>{{.description}}</P>
+                <a href="{{ .Site.BaseURL }}" class="link_style">Sign up for a 1-on-1 demo
+                    <svg width="15px" height="15px" viewBox="0 0 16 16"  class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path class="right-arrow" fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+      </div><!-- sloution section quotes--> 
+    {{end}}
+  {{end}}
+  </div>
+</section>
+
+{{partial "integrationSection.html" .}}
+
+{{partial "testimonial.html" .}}
+{{ partial "operational.html" .}}
+ {{ partial "blogSection.html" .}}
+  {{ partial "cta.html" .}}
+{{end}}

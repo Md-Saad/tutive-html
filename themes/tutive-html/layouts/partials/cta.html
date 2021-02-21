@@ -1,0 +1,29 @@
+{{with .Site.Data.cta}}
+{{if .enable}}
+<!-- Mark up for call- To- Action Section-->
+<section class="callToAction" id="callToAction">
+  <div class="container">
+      <div class="row justify-content-center align-items-center">
+          <div class="col-md-12">
+              <div class="callToAction_item">
+                  <div class="section_header text-center ">
+                      <h2>{{.title}}</h2>
+                      <h3>{{.subtitle}}</h3>
+                      <a href="{{ .url | absURL}}" class=" button-light">View Current Openings 
+                      </a>
+                  </div>
+
+
+                  <div class="callToAction_shape_avater">
+                      <img src="{{ .shape1 | absURL }}" alt="call_to_action_people.png">
+                  </div>
+                  <div class="callToAction_shape">
+                      <img src="{{ .shape2 | absURL }}" alt="call_to_action_shape">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{{end}}
+{{end}}

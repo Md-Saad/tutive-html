@@ -26,6 +26,16 @@
         font-weight: 600;
         color: #fff;
     }
+    &_slider-rating{
+      li{
+        i{
+          color: #e5593c;
+          &.inactive{
+            color: #858585;
+          }
+        }
+      }
+    }
     &_card_review{
         &_container{
             padding: 30px;
