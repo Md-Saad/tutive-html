@@ -1,0 +1,79 @@
+{{define "main"}}
+  {{partial "pricePackage.html" .}}
+  <section class="pricing_table" id="pricing_table">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="section_header text-center">
+            <h2>{{.Title}}</h2>
+          </div>
+        </div> 
+      </div>
+
+      <div class="row justify-content-center pricing_table_item">
+          <div class="col-12">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Top PandaDoc features</th>		
+                  <th scope="col">Free</th>
+                  <th scope="col">Essentials</th>
+                  <th scope="col">Business</th>
+                  <th scope="col">Enterprise</th>
+                </tr>
+              </thead><!-- end of Table Head-->
+              <tbody>
+              <tr>
+                {{ with index .Site.Data.price "package1" }}
+                <td >
+                  
+                   {{.name}}
+                    <svg width="16" height="16" viewBox="0 0 16 16" class="pricing_table_icon_addon" data-toggle="tooltip" data-placement="bottom" title="{{.name}}">
+                        <path d="M8 16a8 8 0 1 1 8-8 8 8 0 0 1-8 8zM8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm.61 11.31H7.39v-1.23h1.22zm1.28-4.77l-.55.56a2.08 2.08 0 0 0-.72 1.75H7.38v-.31A2.48 2.48 0 0 1 8.1 7.8l.77-.8a1.19 1.19 0 0 0 .36-.87 1.23 1.23 0 0 0-2.46 0H5.54a2.46 2.46 0 0 1 4.92 0 2 2 0 0 1-.57 1.41z"></path>
+                    </svg>
+                </td>
+                <td>{{.value1}}</td>
+                <td>{{.value2}}</td>
+                <td>{{.value3}}</td>
+                <td>{{.value4}}</td>
+                {{end}}
+              </tr><!-- end of Row-->
+              <tr>
+                {{ with index .Site.Data.price "package2" }}
+                <td >
+                  
+                   {{.name}}
+                    <svg width="16" height="16" viewBox="0 0 16 16" class="pricing_table_icon_addon" data-toggle="tooltip" data-placement="bottom" title="{{.name}}">
+                        <path d="M8 16a8 8 0 1 1 8-8 8 8 0 0 1-8 8zM8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm.61 11.31H7.39v-1.23h1.22zm1.28-4.77l-.55.56a2.08 2.08 0 0 0-.72 1.75H7.38v-.31A2.48 2.48 0 0 1 8.1 7.8l.77-.8a1.19 1.19 0 0 0 .36-.87 1.23 1.23 0 0 0-2.46 0H5.54a2.46 2.46 0 0 1 4.92 0 2 2 0 0 1-.57 1.41z"></path>
+                    </svg>
+                </td>
+                <td>{{.value1 | safeHTML}}</td>
+                <td>{{.value2}}</td>
+                <td>{{.value3}}</td>
+                <td>{{.value4}}</td>
+                {{end}}
+              </tr><!-- end of Row-->
+              <tr>
+                {{ with index .Site.Data.price "package3" }}
+                <td >
+                  
+                   {{.name}}
+                    <svg width="16" height="16" viewBox="0 0 16 16" class="pricing_table_icon_addon" data-toggle="tooltip" data-placement="bottom" title="{{.name}}">
+                        <path d="M8 16a8 8 0 1 1 8-8 8 8 0 0 1-8 8zM8 1a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm.61 11.31H7.39v-1.23h1.22zm1.28-4.77l-.55.56a2.08 2.08 0 0 0-.72 1.75H7.38v-.31A2.48 2.48 0 0 1 8.1 7.8l.77-.8a1.19 1.19 0 0 0 .36-.87 1.23 1.23 0 0 0-2.46 0H5.54a2.46 2.46 0 0 1 4.92 0 2 2 0 0 1-.57 1.41z"></path>
+                    </svg>
+                </td>
+                <td>{{.value1 | safeHTML}}</td>
+                <td>{{.value2}}</td>
+                <td>{{.value3}}</td>
+                <td>{{.value4}}</td>
+                {{end}}
+              </tr><!-- end of Row-->
+
+            </tbody><!-- end of Table Body-->
+          </table><!-- end of Table-->
+        </div> 
+      </div>
+    </div>
+  </section>
+  {{ partial "cta" .}}
+  {{end}}
