@@ -7,7 +7,7 @@ sections:
 - type: directory
   path: data
   label: Data
-  create: none
+  create: all
   match: "**/*"
 - type: directory
   path: content
