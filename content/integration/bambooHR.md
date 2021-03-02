@@ -1,8 +1,8 @@
 ---
-title: "Salesforce"
-date: 2021-02-17T19:47:36+06:00
-type: "Human Resources"
-thumb: "images/integration_page/trinet.svg"
+title: "BambooHR"
+date: 2021-02-24T19:55:52+06:00
+integration_type: "Human Resources"
+thumb: "images/integration_page/bamboo-hr-2.svg"
 ---
 ## Transform Data Into Actionable Sales Documents With Sell And PandaDoc
  Access Your Full Content Library Inside Zendesk Sell

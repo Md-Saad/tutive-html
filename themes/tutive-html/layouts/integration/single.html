@@ -1,0 +1,79 @@
+{{define "main"}}
+<!-- Mark up for Integration Single Page div-->
+<section class="integration_page_single">
+  <div class="integration_breadcrumb" >
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="site-breadcrumb" >
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ .Site.Params.integrationLink | absURL }}">Integration</a></li>
+                    <li class="breadcrumb-item" aria-current="page">{{ .Title }}</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Mark up for Hero div-->
+  <div class="hero_inner_page">
+      <div class="container">
+          <div class="row justify-content-center ">
+              <div class="col-md-6">
+                  <div class="hero_inner_page_content">
+                      <h1>PandaDoc for Zendesk Sell (formerly Base CRM)</h1>
+                      <p>Create better proposals in less time and close deals faster with Zendesk Sell and PandaDoc.</p>
+                  </div>
+                  <div class="hero_inner_page-buttons clearfix">
+                      <a href="#" class="button-light"> Try it free</a>
+                      <a href="#" class="button "> Request A Demo</a>
+                      <p>No credit card required</p>
+                  </div>    
+              </div>
+
+              <div class="col-md-5 mr-auto">
+                  <div class="hero_inner_page_figure text-center">
+                      <img src="../images/integration_page/aws.svg" alt="aws">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Mark up for Integration Item Description-->
+  <div class="integration_page_single_description">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                 {{.Content}}
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="integration_page" id="integration_page">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-9 m-auto">
+                  <div class="div_header text-center">
+                      <h2>Connect your apps to PandaDoc</h2>
+                  </div>
+                  <div class="integration_page_content_wrapper">
+                      <div class="integration_page_content">
+                          <div class="integration_page_item_wrapper">
+                            {{ range first 10 (where  $.Site.RegularPages "Type" "integration") }}
+                              <a href="{{.Permalink}}" class="integration_page_item">
+                                  <img src="{{ .Params.thumb | absURL}}" alt="aws">
+                                  <h3>{{.Title}}</h3>
+                              </a><!--End OF Integration Item -->
+                            {{end}}
+                          </div><!--End OF Integration Item Wrapper-->
+                      </div><!--End OF Integration Content Wrapper-->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{{end}}

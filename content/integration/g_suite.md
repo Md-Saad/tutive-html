@@ -1,9 +1,10 @@
 ---
-title: "Salesforce"
-date: 2021-02-17T19:47:36+06:00
-type: "Human Resources"
-thumb: "images/integration_page/trinet.svg"
+title: "G Suite"
+date: 2021-02-24T19:47:05+06:00
+integration_type: "Business Suite"
+thumb: "images/integration_page/gsuite.svg"
 ---
+
 ## Transform Data Into Actionable Sales Documents With Sell And PandaDoc
  Access Your Full Content Library Inside Zendesk Sell
 The PandaDoc content library puts your sales and marketing collateral at your fingertips inside Zendesk Sell (formerly Base CRM). Easily access, customize, and send any piece of content from inside your deals screen.

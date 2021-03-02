@@ -1,0 +1,82 @@
+{{define "main"}}
+
+<!-- Mark up for Page Header Section-->
+<section class="page_title">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-9 ">
+				<div class="section_header text-center">
+					<h1>{{.Title}}</h1>
+					<p>{{.Params.description}}</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{{with .Site.Data.team}}
+{{if .enable}}
+<section class="team-member">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="team-member-group">
+          {{ with index .developer }}
+          <h2>{{.type}}</h2>
+          <div class="team-member-group-content">
+            {{range .team_members}}
+            <div class="team-member-group-content-details"> 
+              <img src="{{.image | absURL}}" alt="team_member2">
+              <div class="member-info">
+                <h4>{{.name}}</h4>
+                <p>{{.designation}}</p>
+              </div>
+            </div><!--Members-->
+            {{end}}
+            {{end}}
+          </div>
+        </div><!--Team Member Group-->
+
+        <div class="team-member-group">
+          {{ with index .designer }}
+          <h2>{{.type}}</h2>
+          <div class="team-member-group-content">
+            {{range .team_members}}
+            <div class="team-member-group-content-details"> 
+              <img src="{{.image | absURL}}" alt="team_member2">
+              <div class="member-info">
+                <h4>{{.name}}</h4>
+                <p>{{.designation}}</p>
+              </div>
+            </div><!--Members-->
+            {{end}}
+            {{end}}
+          </div>
+        </div><!--Team Member Group-->
+
+        <div class="team-member-group">
+          {{ with index .QualityController }}
+          <h2>{{.type}}</h2>
+          <div class="team-member-group-content">
+            {{range .team_members}}
+            <div class="team-member-group-content-details"> 
+              <img src="{{.image | absURL}}" alt="team_member2">
+              <div class="member-info">
+                <h4>{{.name}}</h4>
+                <p>{{.designation}}</p>
+              </div>
+            </div><!--Members-->
+            {{end}}
+            {{end}}
+          </div>
+        </div><!--Team Member Group-->
+      </div>
+    </div>
+  </div>
+</section>
+
+{{end}}
+{{end}}
+{{ partial "blogSection.html" .}}
+{{ partial "cta.html" .}}
+{{end}}

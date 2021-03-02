@@ -1,8 +1,8 @@
 ---
-title: "Salesforce"
-date: 2021-02-17T19:47:36+06:00
-type: "Human Resources"
-thumb: "images/integration_page/trinet.svg"
+title: "Zenefits"
+date: 2021-02-24T19:56:56+06:00
+integration_type: "Human Resources"
+thumb: "images/integration_page/zenefits.svg"
 ---
 ## Transform Data Into Actionable Sales Documents With Sell And PandaDoc
  Access Your Full Content Library Inside Zendesk Sell

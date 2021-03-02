@@ -1,8 +1,8 @@
 ---
-title: "Salesforce"
-date: 2021-02-17T19:47:36+06:00
-type: "Human Resources"
-thumb: "images/integration_page/trinet.svg"
+title: "Amazon Web Service"
+date: 2021-02-24T19:14:41+06:00
+integration_type: "cloud"
+thumb: "images/integration_page/aws.svg"
 ---
 ## Transform Data Into Actionable Sales Documents With Sell And PandaDoc
  Access Your Full Content Library Inside Zendesk Sell

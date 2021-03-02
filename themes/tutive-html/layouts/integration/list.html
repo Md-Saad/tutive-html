@@ -1,3 +1,69 @@
 {{define "main"}}
-
+<!-- Mark up for Page Header Section-->
+<section class="page_title">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-9 ">
+				<div class="section_header text-center">
+					<h1>{{.Title}}</h1>
+					<p>{{.Description}}</p>
+        </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Mark up for Integration  Page -->
+<section class="integration_page" id="integration_page">
+  <div class="container">
+      <div class="row">
+          <div class="col-3">
+              <div class="integration_page_sidebar_menu">
+                  <h3>Categories</h3>
+                  <ul>
+                      {{range .Params.category}}
+                      <li class="active"><a href="#{{.id}}" class="scroll">{{.name}}</a></li>
+                      {{end}}
+                  </ul>
+              </div>
+          </div>
+          <div class="col-9">
+              <div class="integration_page_content_wrapper">
+                  <div class="integration_page_content" id="cloud">
+                      <h2 class="text-center">Cloud Services</h2>
+                      <div class="integration_page_item_wrapper">
+                        {{ range where .Site.Pages "Params.integration_type" "cloud" }}
+                          <a href="{{.Permalink}}" class="integration_page_item">
+                              <img src="{{.Params.thumb | absURL}}" alt="aws">
+                              <h3>{{.Title}}</h3>
+                          </a><!--End OF Integration Item -->
+                        {{end}}
+                      </div><!--End OF Integration Item Wrapper-->
+                  </div><!--End OF Integration Content Wrapper-->
+                  <div class="integration_page_content" id="business">
+                      <h2 class="text-center">Business Suite</h2>
+                      <div class="integration_page_item_wrapper">
+                        {{ range where .Site.Pages "Params.integration_type" "Business Suite" }}
+                          <a href="{{.Permalink}}" class="integration_page_item">
+                              <img src="{{.Params.thumb | absURL}}" alt="aws">
+                              <h3>{{.Title}}</h3>
+                          </a><!--End OF Integration Item -->
+                        {{end}}
+                      </div><!--End OF Integration Item Wrapper-->
+                  </div><!--End OF Integration Content Wrapper-->
+                  <div class="integration_page_content" id="human">
+                      <h2 class="text-center">Human Resources</h2>
+                      <div class="integration_page_item_wrapper">
+                      {{ range where .Site.Pages "Params.integration_type" "Human Resources" }}
+                          <a href="{{.Permalink}}" class="integration_page_item">
+                              <img src="{{.Params.thumb | absURL}}" alt="aws">
+                              <h3>{{.Title}}</h3>
+                          </a><!--End OF Integration Item -->
+                        {{end}}
+                      </div><!--End OF Integration Item Wrapper-->
+                  </div><!--End OF Integration Content Wrapper-->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 {{end}}

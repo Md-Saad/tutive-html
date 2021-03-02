@@ -112,6 +112,7 @@ $(window).on("scroll", function () {
   }
 });
 
+
 // G-Map
 /**
  * Created by Kausar on 06/10/2016.
@@ -120,7 +121,10 @@ window.marker = null;
 
 function initialize() {
   var map;
-  var nottingham = new google.maps.LatLng(23.7783741, 90.3746808);
+  var lat = $("#map").data("lat");
+  var long = $("#map").data("long");
+  console.log(lat, long);
+  var mapCenter = new google.maps.LatLng(lat, long);
   var style = [
     {
       featureType: "water",
@@ -299,7 +303,7 @@ function initialize() {
   ];
   var mapOptions = {
     // SET THE CENTER
-    center: nottingham,
+    center: mapCenter,
     // SET THE MAP STYLE & ZOOM LEVEL
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     // REMOVE ALL THE CONTROLS EXCEPT ZOOM
@@ -315,6 +319,7 @@ function initialize() {
       style: google.maps.ZoomControlStyle.LARGE,
     },
   };
+
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
   // SET THE MAP TYPE
   var mapType = new google.maps.StyledMapType(style, {
@@ -323,7 +328,7 @@ function initialize() {
   map.mapTypes.set("grey", mapType);
   map.setMapTypeId("grey");
   //CREATE A CUSTOM PIN ICON
-  var marker_image = "images/pin.png";
+  var marker_image = $("#map").data("pin");
   var pinIcon = new google.maps.MarkerImage(
     marker_image,
     null,
@@ -332,13 +337,16 @@ function initialize() {
     new google.maps.Size(25, 34)
   );
   marker = new google.maps.Marker({
-    position: nottingham,
+    position: mapCenter,
     map: map,
     icon: pinIcon,
     title: "bizcred",
   });
 }
-google.maps.event.addDomListener(window, "load", initialize);
+
+if ($("#map").length > 0) {
+  google.maps.event.addDomListener(window, "load", initialize);
+}
 
 // PRogress bar for Blo Single Page
 window.onscroll = function() {myFunction()};
