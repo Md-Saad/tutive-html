@@ -27,7 +27,7 @@
                 <ul class="footer_items_list">
                   {{ range first 5 (where $.Site.RegularPages "Type" "solution") }}
                   <li>
-                      <a href="{{ $.Site.BaseURL }}{{.Permalink}}"> {{ .Title}} </a>
+                      <a href="{{.Permalink}}"> {{ .Title}} </a>
                   </li>
                 {{end}}
                 </ul>
