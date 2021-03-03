@@ -19,7 +19,7 @@
   #     type: "Developer"
   #     designation: "manager"
   #     image : "images/team/team_member4.png"
-
+  heading: "Our Executive Team"
   developer:
     type: "Developer"
     team_members:
@@ -35,6 +35,9 @@
       - name: "Jona Gerhard"
         designation: "manager"
         image : "images/team/team_member4.png"
+      - name: "Tahajjudi"
+        designation: "Director"
+        image : "images/team/team_member3.png"
 
   designer:
     type: "Designer"

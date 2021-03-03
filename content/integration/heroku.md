@@ -2,6 +2,8 @@
 title: "Heroku"
 date: 2021-02-24T19:15:54+06:00
 integration_type: "cloud"
+heading: "PandaDoc for Zendesk Sell (formerly Base CRM)"
+sub_heading : "Create better proposals in less time and close deals faster with Zendesk Sell and PandaDoc."
 thumb: "images/integration_page/heroku-2.svg"
 ---
 

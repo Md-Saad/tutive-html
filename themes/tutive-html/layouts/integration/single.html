@@ -23,19 +23,19 @@
           <div class="row justify-content-center ">
               <div class="col-md-6">
                   <div class="hero_inner_page_content">
-                      <h1>PandaDoc for Zendesk Sell (formerly Base CRM)</h1>
-                      <p>Create better proposals in less time and close deals faster with Zendesk Sell and PandaDoc.</p>
+                      <h1>{{.Params.heading}}</h1>
+                      <p>{{.Params.sub_heading}}</p>
                   </div>
                   <div class="hero_inner_page-buttons clearfix">
-                      <a href="#" class="button-light"> Try it free</a>
-                      <a href="#" class="button "> Request A Demo</a>
+                      <a href="{{ "contact" | absURL}}" class="button-light"> Try it free</a>
+                      <a href="{{ "contact" | absURL}}" class="button "> Request A Demo</a>
                       <p>No credit card required</p>
                   </div>    
               </div>
 
               <div class="col-md-5 mr-auto">
                   <div class="hero_inner_page_figure text-center">
-                      <img src="../images/integration_page/aws.svg" alt="aws">
+                      <img src="{{.Params.thumb | absURL}}" alt="aws">
                   </div>
               </div>
           </div>

@@ -1,0 +1,93 @@
+{{define "main"}}
+<!-- Mark up for Page Header Section-->
+<section class="page_title">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-9 ">
+				<div class="section_header text-center">
+					<h1>{{.Title}}</h1>
+					<p>{{.Params.description}}</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Mark up for Video Section-->
+<section class="video about_page_video" id="video">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="video-musking">
+          <img
+            src="{{.Params.video_bg | absURL}}"
+            alt="video png"
+            class="video-img"
+          />
+          <div
+            class="video-button"
+            data-video="{{ .Params.video_url}}"
+          >
+            <img src="{{.Params.video_thumb | absURL}}" alt="video-icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class=" about">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section_header text-left ">
+                  <h2>{{.Params.sub_title}}</h2>
+                  <P>{{.Params.sub_title_desc}}</P>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Mark up for All Team Members Section-->
+{{with .Site.Data.team}}
+{{if .enable}}
+<section class="team full_team" id="team">
+  <div class="team_shape_left">
+    <img src="../images/team/team_shape_left.svg" alt="">
+  </div>
+  <div class="team_shape_right">
+    <img src="../images/team/team_shape_right.svg" alt="">
+  </div>
+  <div class="container">
+    <div class="row ">
+      <div class="col-sm-12">
+        <div class="section_header text-center">
+          <h2>{{.heading}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row service_items">
+        <div class="col-sm-12">
+          <div class="full_team_slider">
+            {{range .developer.team_members }}
+            <div class="team_slider_item">
+              <img src="{{.image | absURL }}" alt=" team_member1">
+              <div class="team_member_details">
+                <h4>{{.name}}</h4>
+                <p>{{.designation}}</p>
+              </div>
+            </div>
+            {{end}}
+          </div>
+
+          <div class="team-member-link text-center mt-5">
+            <a href="{{ $.Site.Params.memberLink | absURL }}" class="button button-light">View all Members</a>
+          </div>
+      </div>    
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}}
+{{ partial "service.html" .}}
+{{ partial "pricePackage.html" .}}
+{{ partial "cta.html" .}}
+{{end}}

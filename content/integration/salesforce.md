@@ -2,6 +2,8 @@
 title: "Salesforce"
 date: 2021-02-17T19:47:36+06:00
 type: "Human Resources"
+heading: "PandaDoc for Zendesk Sell (formerly Base CRM)"
+sub_heading : "Create better proposals in less time and close deals faster with Zendesk Sell and PandaDoc."
 thumb: "images/integration_page/trinet.svg"
 ---
 ## Transform Data Into Actionable Sales Documents With Sell And PandaDoc

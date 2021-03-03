@@ -30,6 +30,15 @@
       font-weight: 700;
     }
   }
+  .nav-item{
+    &.active{
+      .nav-link{
+        font-weight: 700;
+        color: #8a74ff 
+      }
+    }
+  }
+  
   .log_in {
     padding-top: 20px;
     font-weight: 500;

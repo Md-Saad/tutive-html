@@ -2,6 +2,8 @@
 title: "Justworks"
 date: 2021-02-24T19:56:29+06:00
 integration_type: "Human Resources"
+heading: "PandaDoc for Zendesk Sell (formerly Base CRM)"
+sub_heading : "Create better proposals in less time and close deals faster with Zendesk Sell and PandaDoc."
 thumb: "images/integration_page/justworks.svg"
 ---
 
