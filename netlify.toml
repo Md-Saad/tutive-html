@@ -1,5 +1,5 @@
 [build]
-publish = "public"
+publish = "https://tutive-html.netlify.app/public"
 command = "hugo"
 
 [context.production.environment]
