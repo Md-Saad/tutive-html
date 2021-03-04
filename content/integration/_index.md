@@ -12,14 +12,14 @@ category:
   id: "business"
 - name: "Human Resources"
   id: "human"
-- name: "Device Management"
-  id: "device"
-- name: "Developer Tools"
-  id: "developer"
-- name: "Single Sign On"
-  id: "single"
-- name: "Other"
-  id: "other"
+# - name: "Device Management"
+#   id: "device"
+# - name: "Developer Tools"
+#   id: "developer"
+# - name: "Single Sign On"
+#   id: "single"
+# - name: "Other"
+#   id: "other"
 
 ---
 

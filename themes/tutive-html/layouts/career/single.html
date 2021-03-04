@@ -1,0 +1,90 @@
+{{define "main"}}
+<!-- Mark up for CAreer Single Section-->
+<section class="job" id="job">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="job-section">
+          <div class="job-heading">
+            <div class="job-heading-content">
+              <div class="job-heading-title">
+                <h2>{{.Title}}</h2>
+                <p><span>{{.Params.address}} /</span> <span>{{ delimit .Params.tags " / " }}</span></p>
+              </div>
+              <div class="job-heading-apply">
+                <a class="button" href="" data-toggle="modal" data-target="#exampleModal">Apply for the post</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="job-description">
+            {{.Content }}
+          </div>
+
+          <div class="job-apply text-center">
+            <a class="button" href="" data-toggle="modal" data-target="#exampleModal">Apply for the post</a>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Fill Up The form</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="contact_form">
+            <h2>{{.Title}}</h2>
+            <p><span>{{.Params.address}} /</span> <span>{{ delimit .Params.tags " / " }}</span></p>
+
+            <form id="contact-form" action="{{ .Site.Params.formspreeURL }}" method="POST">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="file" name="attachment" class="form-control custom-file-input" id="inputGroupFile01">
+                  <label class="custom-file-label" for="inputGroupFile01">Attach Resume/CV</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="text" name="Name" class="form-control" placeholder="Your Name">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="email" name="email" class="form-control" placeholder="Email ID">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="text" name="phone" class="form-control" placeholder="Phone No.">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="text" name="currentJob" class="form-control" placeholder="Current Company">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <textarea name="Message" class="form-control" placeholder="ADDITIONAL INFORMATION"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-zoom button-light" id="contact-form-button">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ partial "blogSection.html" .}}
+{{end}}
+
+

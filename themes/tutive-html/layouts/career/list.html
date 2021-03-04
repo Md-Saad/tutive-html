@@ -1,0 +1,96 @@
+{{define "main"}}
+<!-- Mark up for Page Header Section-->
+<section class="page_title">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-9 ">
+				<div class="section_header text-center">
+					<h1>{{.Title}}</h1>
+					<p>{{.Params.description}}</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Mark up for Career Section-->
+<section class="career" id="career">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 justify-content-center ">
+        <div class="section_header text-center ">
+          <h2>Open Position</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="career-section">
+          {{ $getstarted := site.GetPage "/career/sales" }}
+          {{with $getstarted}}
+          <h3 class="career-title">{{.Title}}</h3>
+          <div class="career-post">
+            {{ range .Pages }}
+            <div class="career-post-item">
+              <div class="content">
+                <h4>{{.Title}}</h4>
+                <p>{{.Params.address}}</p>
+              </div>
+              <div class="action">
+                <a class="button" href="{{.Permalink}}">Apply</a>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          {{end}}
+        </div><!-- Career Section-->
+
+        <div class="career-section">
+          {{ $getstarted := site.GetPage "/career/Operations" }}
+          {{with $getstarted}}
+          <h3 class="career-title">{{.Title}}</h3>
+          <div class="career-post">
+            {{ range .Pages }}
+            <div class="career-post-item">
+              <div class="content">
+                <h4>{{.Title}}</h4>
+                <p>{{.Params.address}}</p>
+              </div>
+              <div class="action">
+                <a class="button" href="{{.Permalink}}">Apply</a>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          {{end}}
+        </div><!-- Career Section-->
+
+        <div class="career-section">
+          {{ $getstarted := site.GetPage "/career/product" }}
+          {{with $getstarted}}
+          <h3 class="career-title">{{.Title}}</h3>
+          <div class="career-post">
+            {{ range .Pages }}
+            <div class="career-post-item">
+              <div class="content">
+                <h4>{{.Title}}</h4>
+                <p>{{.Params.address}}</p>
+              </div>
+              <div class="action">
+                <a class="button" href="{{.Permalink}}">Apply</a>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          {{end}}
+        </div><!-- Career Section-->
+
+        
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
+{{end}}
