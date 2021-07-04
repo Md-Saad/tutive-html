@@ -52,10 +52,9 @@
       width: 100%;
     }
     left:2%;
-    top:10%;
+    top:95%;
     @include tablet{
       left:2%;
-      top:90%;
     }
   }
   &_shape_right{
@@ -71,7 +70,7 @@
   &_slider{
     .slick-prev{
       left: -475px;
-      top:340px;
+      top:400px;
       border-radius: 50%;
       width: 60px;
       height: 60px;
@@ -84,13 +83,16 @@
           color:#fff;
         }
       }
-      @include desktop{
-        left:-80%;
+      @include desktop-lg{
+        left: -400px;
+      }
+      @include desktop-lg{
+        left: -300px;
       }
     }
     .slick-next {
       left: -400px;
-      top:340px;
+      top:400px;
       border-radius: 50%;
       width: 60px;
       height: 60px;
@@ -103,8 +105,11 @@
           color:#fff;
         }
       }
-      @include desktop{
-        left:-60%;
+      @include desktop-lg{
+        left: -325px;
+      }
+      @include desktop-lg{
+        left: -225px;
       }
     }
     .slick-prev:before, .slick-next:before {
@@ -138,7 +143,7 @@
       width: 100%;
     }
     left:5%;
-    top:70%;
+    top:100%;
     transform: translate(-50%,-50%);
     @include desktop{
       top:70px; 

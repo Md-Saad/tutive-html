@@ -12,16 +12,16 @@ tabDesc2= "Lorem ipsum dolor it consetur sadipscing elitr diam nonumy eimod temp
 tabDesc3= "Lorem ipsum dolor it consetur sadipscing elitr diam nonumy eimod tempor invidunt labore et dolore"
 >}}
 {{< tab tabNum="1" >}}
-![Image Example](images/service/service1.png "Its Baby Yoda!")
+![Image Example](../images/service/service1.png "Its Baby Yoda!")
 {{< /tab >}}
 {{< tab tabNum="2" >}}
 
-![Image Example](images/service/service1.png "Its Baby Yoda!")
+![Image Example](../images/service/service1.png "Its Baby Yoda!")
 
 {{< /tab >}}
 {{< tab tabNum="3" >}}
 
-![Image Example](images/service/service1.png "Its Baby Yoda!")
+![Image Example](../images/service/service1.png "Its Baby Yoda!")
 
 {{< /tab >}}
 {{< /tabs >}}

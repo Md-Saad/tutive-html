@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solution on tutive</title>
+    <link>https://tutive-html.netlify.app/solution/</link>
+    <description>Recent content in Solution on tutive</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Feb 2021 20:27:27 +0600</lastBuildDate><atom:link href="https://tutive-html.netlify.app/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Payments</title>
+      <link>https://tutive-html.netlify.app/solution/payments/</link>
+      <pubDate>Wed, 17 Feb 2021 20:30:16 +0600</pubDate>
+      
+      <guid>https://tutive-html.netlify.app/solution/payments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Esignatures</title>
+      <link>https://tutive-html.netlify.app/solution/esignatures/</link>
+      <pubDate>Wed, 17 Feb 2021 20:30:00 +0600</pubDate>
+      
+      <guid>https://tutive-html.netlify.app/solution/esignatures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contracts</title>
+      <link>https://tutive-html.netlify.app/solution/contracts/</link>
+      <pubDate>Wed, 17 Feb 2021 20:29:34 +0600</pubDate>
+      
+      <guid>https://tutive-html.netlify.app/solution/contracts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quotes</title>
+      <link>https://tutive-html.netlify.app/solution/quotes/</link>
+      <pubDate>Wed, 17 Feb 2021 20:29:17 +0600</pubDate>
+      
+      <guid>https://tutive-html.netlify.app/solution/quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proposals</title>
+      <link>https://tutive-html.netlify.app/solution/proposals/</link>
+      <pubDate>Wed, 17 Feb 2021 20:28:59 +0600</pubDate>
+      
+      <guid>https://tutive-html.netlify.app/solution/proposals/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

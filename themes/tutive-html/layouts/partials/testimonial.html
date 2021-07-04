@@ -11,6 +11,26 @@
                       <svg width="92" height="15" viewBox="0 0 92 15"><title>4.5 stars out of 5</title>
                           <path fill="#e5593c" d="M8,12,3.3,14.47l.9-5.23L.39,5.53l5.26-.77L8,0l2.35,4.76,5.26.77L11.8,9.24l.9,5.23Zm19,0-4.7,2.47.9-5.23L19.39,5.53l5.26-.77L27,0l2.35,4.76,5.26.77L30.8,9.24l.9,5.23Zm19,0-4.7,2.47.9-5.23L38.39,5.53l5.26-.77L46,0l2.35,4.76,5.26.77L49.8,9.24l.9,5.23Zm19,0-4.7,2.47.9-5.23L57.39,5.53l5.26-.77L65,0l2.35,4.76,5.26.77L68.8,9.24l.9,5.23ZM91.61,5.53l-5.26-.77L84,0,81.65,4.76l-5.26.77L80.2,9.24,79.38,14l-.08.47.9-.47L84,12l4.7,2.47-.9-5.23ZM84,10.87V2.26l1.69,3.42,3.77.55L86.73,8.89l.64,3.75Z"></path>
                       </svg>
+                      {{$a := slice}}
+                      {{range .testimonial_feature}}
+                        {{ range .star1}}
+                            {{ $a = $a | append .}}
+                        {{end}}
+                      {{end}}
+
+                      <!-- {{ range $index, $e :=$a}}
+                        {{ $index  }} = {{.}}
+
+                      {{end}} -->
+                      
+                        {{ range $index, $e := $a}}
+                        {{ $b := .}}
+                        {{ $c := add $b . }}
+                        {{with $c}}
+                            {{.}}
+                        {{end}}
+                        {{end}}
+                        
                       <a href="#" class="stars-total__link button-text button-text--small" target="_blank" rel="noopener">
                           {{ len .testimonial_feature}} Total Reviews
                       </a>
